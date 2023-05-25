@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!--
+  lang attribute of html assist screen readers in identifying the language of the page.
+  The charset attribute specifies the character encoding of the page, and, nowadays, 
+  UTF-8 is the only encoding supported by most browsers.
+  a viewport definition tells the browser how to render the page.
+  The value of the content attribute is used by search engines to provide a description of your page.
+  title appears on top 
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,6 +21,8 @@
       <h1>HTML/CSS Quiz</h1>
       <nav>
         <ul>
+          <!--To be able to navigate within the page, give each anchor element 
+            an href corresponding to the id of the h2 elements.-->
             <li ><a href="#student-info" accesskey="a">INFO</a></li>
             <li><a href="#html-questions"  accesskey="b">HTML</a></li>
             <li><a href="#css-questions" accesskey="c">CSS</a></li>
@@ -32,6 +42,10 @@
             <input type="email" name="student-email" id="student-email" />
           </div>
           <div class="info">
+            <!--Arguably, D.O.B. is not descriptive enough. 
+              This is especially true for visually impaired users. 
+              One way to get around such an issue, without having to 
+              add visible text to the label, is to add text only a screen reader can read-->
             <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
             <input type="date" name="birth-date" id="birth-date" />
           </div>
@@ -47,6 +61,10 @@
               </legend>
               <ul class="answers-list">
                 <li>
+                  <!--If you click on the radio inputs, you might notice both 
+                    inputs within the same true/false fieldset can be selected 
+                    at the same time. Group the relevant inputs together such 
+                    that only one input from a pair can be selected at a time.-->
                   <label for="q1-a1">
                     <input type="radio" id="q1-a1" name="q1" value="true" />
                     True
@@ -109,6 +127,9 @@
         <button type="submit">Send</button>
       </form>
     </main>
+    <!--Two final semantic HTML elements for this project are the footer and address elements. 
+      The footer element is a container for a collection of content that is related to the page, 
+      and the address element is a container for contact information for the author of the page.-->
     <footer>
       <address>
         <a href="https://freecodecamp.org">freeCodeCamp</a><br />
